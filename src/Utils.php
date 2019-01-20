@@ -1,6 +1,6 @@
 <?php
 
-namespace Sober\Controller;
+namespace Oxboot\Controller;
 
 class Utils
 {

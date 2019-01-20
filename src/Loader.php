@@ -1,6 +1,6 @@
 <?php
 
-namespace Sober\Controller;
+namespace Oxboot\Controller;
 
 use Sober\Controller\Utils;
 use Brain\Hierarchy\Hierarchy;

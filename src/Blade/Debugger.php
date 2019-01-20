@@ -1,8 +1,8 @@
 <?php
 
-namespace Sober\Controller\Blade;
+namespace Oxboot\Controller\Blade;
 
-use Sober\Controller\Blade;
+use Oxboot\Controller\Blade;
 
 class Debugger extends Blade
 {

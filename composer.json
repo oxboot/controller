@@ -1,9 +1,9 @@
 {
-  "name": "soberwp/controller",
+  "name": "oxboot/controller",
   "type": "package",
   "license": "MIT",
   "description": "WordPress package to enable a basic controller when using Blade with Sage 9",
-  "homepage": "https://github.com/soberwp",
+  "homepage": "https://github.com/oxboot/controller/",
   "authors": [
     {
       "name": "Darren Jacoby",
@@ -15,7 +15,7 @@
     "wordpress"
   ],
   "support": {
-    "issues": "https://github.com/soberwp/controller/issues"
+    "issues": "https://github.com/oxboot/controller/issues"
   },
   "require": {
     "php": ">=5.6.0",
@@ -27,7 +27,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Sober\\Controller\\": "src/"
+      "Oxboot\\Controller\\": "src/"
     },
     "files": [
       "controller.php"

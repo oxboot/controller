@@ -5,16 +5,16 @@ namespace Sober\Controller;
 use Brain\Hierarchy\Hierarchy;
 
 /**
- * Sage Namespace
+ * Oxboot Namespace
  */
-function sage()
+function oxboot()
 {
     // Determine if project namespace has been changed
-    $sage = apply_filters('sober/controller/sage/namespace', 'App') . '\sage';
+    $oxboot = apply_filters('oxboot/controller/oxboot/namespace', 'App') . '\oxboot';
 
     // Return the function if it exists
-    if (function_exists($sage)) {
-        return $sage;
+    if (function_exists($oxboot)) {
+        return $oxboot;
     }
 
     // Return false if function does not exist
@@ -26,11 +26,11 @@ function sage()
  */
 function loader()
 {
-    // Get Sage function
-    $sage = sage();
+    // Get Oxboot function
+    $oxboot = oxboot();
 
     // Return if function does not exist
-    if (!$sage) {
+    if (!$oxboot) {
         return;
     }
 
@@ -40,8 +40,8 @@ function loader()
     // Run Loader class and pass on WordPress hierarchy class
     $loader = new Loader($hierarchy);
 
-    // Use the Sage DI container
-    $container = $sage();
+    // Use the Oxboot DI container
+    $container = $oxboot();
 
     // Loop over each class
     foreach ($loader->getClassesToRun() as $class) {
@@ -52,7 +52,7 @@ function loader()
         $controller->__setParams();
 
         // Determine template location to expose data
-        $location = "sage/template/{$controller->__getTemplateParam()}-data/data";
+        $location = "oxboot/template/{$controller->__getTemplateParam()}-data/data";
 
         // Pass data to filter
         add_filter($location, function ($data) use ($container, $class) {
@@ -82,30 +82,30 @@ function loader()
  */
 function blade()
 {
-    // Get Sage function
-    $sage = sage();
+    // Get Oxboot function
+    $oxboot = oxboot();
 
     // Return if function does not exist
-    if (!$sage) {
+    if (!$oxboot) {
         return;
     }
 
     // Debugger
-    $sage('blade')->compiler()->directive('debug', function () {
+    $oxboot('blade')->compiler()->directive('debug', function () {
         return '<?php (new \Sober\Controller\Blade\Debugger(get_defined_vars())); ?>';
     });
 
-    $sage('blade')->compiler()->directive('dump', function ($param) {
+    $oxboot('blade')->compiler()->directive('dump', function ($param) {
         return "<?php (new Illuminate\Support\Debug\Dumper)->dump({$param}); ?>";
     });
 
     // Coder
-    $sage('blade')->compiler()->directive('code', function ($param) {
+    $oxboot('blade')->compiler()->directive('code', function ($param) {
         $param = ($param) ? $param : 'false';
         return "<?php (new \Sober\Controller\Blade\Coder(get_defined_vars(), {$param})); ?>";
     });
 
-    $sage('blade')->compiler()->directive('codeif', function ($param) {
+    $oxboot('blade')->compiler()->directive('codeif', function ($param) {
         $param = ($param) ? $param : 'false';
         return "<?php (new \Sober\Controller\Blade\Coder(get_defined_vars(), {$param}, true)); ?>";
     });

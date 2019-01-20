@@ -1,6 +1,6 @@
 <?php
 
-namespace Sober\Controller\Module;
+namespace Oxboot\Controller\Module;
 
 interface Tree
 {

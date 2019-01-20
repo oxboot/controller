@@ -1,6 +1,6 @@
 <?php
 
-namespace Sober\Controller\Blade;
+namespace Oxboot\Controller\Blade;
 
 use Sober\Controller\Blade;
 use Sober\Controller\Utils;
