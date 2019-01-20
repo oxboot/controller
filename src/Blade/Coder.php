@@ -2,8 +2,8 @@
 
 namespace Oxboot\Controller\Blade;
 
-use Sober\Controller\Blade;
-use Sober\Controller\Utils;
+use Oxboot\Controller\Blade;
+use Oxboot\Controller\Utils;
 
 class Coder extends Blade
 {

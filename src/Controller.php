@@ -2,8 +2,8 @@
 
 namespace Oxboot\Controller;
 
-use Sober\Controller\Utils;
-use Sober\Controller\Module\Acf;
+use Oxboot\Controller\Utils;
+use Oxboot\Controller\Module\Acf;
 
 class Controller
 {

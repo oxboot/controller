@@ -2,7 +2,7 @@
 
 namespace Oxboot\Controller;
 
-use Sober\Controller\Utils;
+use Oxboot\Controller\Utils;
 use Brain\Hierarchy\Hierarchy;
 
 class Loader
