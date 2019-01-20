@@ -66,7 +66,7 @@ class Controller
         }
 
         // $this->tree
-        if ($this->class->implementsInterface('\Sober\Controller\Module\Tree')) {
+        if ($this->class->implementsInterface('\Oxboot\Controller\Module\Tree')) {
             $this->tree = true;
         }
     }
