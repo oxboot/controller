@@ -185,7 +185,7 @@ class Controller
         // Remove __contruct, __init, __finalize and this class methods from $this->methods
         $this->methods = array_filter($this->methods, function ($method) {
             return
-                $method->class !== 'Sober\Controller\Controller' &&
+                $method->class !== 'Oxboot\Controller\Controller' &&
                 $method->name !== '__construct' &&
                 $method->name !== '__before' &&
                 $method->name !== '__after';

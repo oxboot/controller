@@ -22,13 +22,13 @@ class Acf
     /**
      * Set Return Filter
      *
-     * Return filter sober/controller/acf-array
+     * Return filter oxboot/controller/acf-array
      */
     private function setReturnFilter()
     {
         $this->returnArrayFormat =
-            (has_filter('sober/controller/acf/array')
-            ? apply_filters('sober/controller/acf/array', $this->returnArrayFormat)
+            (has_filter('oxboot/controller/acf/array')
+            ? apply_filters('oxboot/controller/acf/array', $this->returnArrayFormat)
             : false);
     }
 

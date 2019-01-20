@@ -60,8 +60,8 @@ class Loader
     protected function setNamespace()
     {
         $this->namespace =
-            (has_filter('sober/controller/namespace')
-            ? apply_filters('sober/controller/namespace', rtrim($this->namespace))
+            (has_filter('oxboot/controller/namespace')
+            ? apply_filters('oxboot/controller/namespace', rtrim($this->namespace))
             : 'App\Controllers');
     }
 
